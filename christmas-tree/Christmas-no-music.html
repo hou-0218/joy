@@ -2,7 +2,7 @@
  * @Author: Tina Huang
  * @Date: 2022-12-09 21:29:19
  * @LastEditors: Tina Huang
- * @LastEditTime: 2022-12-10 15:35:42
+ * @LastEditTime: 2022-12-10 15:36:47
  * @Description: 
 -->
 <!DOCTYPE html>
@@ -82,7 +82,7 @@
         align-items: center;
         justify-content: center;
         cursor: pointer;
-        /* display: none; */
+        display: none;
       }
 
       @keyframes shack {
@@ -833,24 +833,13 @@ function drawStars() {
         }, 1000 * i);
       }      
     }
-    let init_flag = false;
-      // music
-      let music_url = "http://music.163.com/song/media/outer/url?id=1892513656.mp3";
-      let _music = new Audio(music_url);
-      window.onclick = function() {
-        if(init_flag) return;
-        init_flag = true;
-        _music.play();
         init();
-        let mask = document.getElementById("mask");
-        mask.remove();
         createParticles()
         drawStar();
         drawMain();
         mainTl.add(starTl, 0);
         gsap.globalTimeline.timeScale(1.5); //  圣诞树开始绘画时小光点动画的绘画速率，越大越快
         drawStars();
-      }
   
   </script>
 </html>

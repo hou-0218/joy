@@ -287,7 +287,7 @@ mainTl
 }, '+=2') */
 
 mainTl.add(starTl, 0)
-gsap.globalTimeline.timeScale(1.5);    //  圣诞树开始绘画时小光点动画的绘画速率，越大越快
+gsap.globalTimeline.timeScale(3);    //  圣诞树开始绘画时小光点动画的绘画速率，越大越快
 
 setTimeout( function(){
   var element = document.getElementById("header");
